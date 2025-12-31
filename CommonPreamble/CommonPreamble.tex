@@ -1,0 +1,56 @@
+% common/preamble.tex
+
+% --- Page Setup ---
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[english]{babel}
+
+% --- Math & Units ---
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{siunitx}
+\sisetup{
+    mode=text,
+    group-separator={,},
+    detect-all,
+    binary-units,
+    list-units = single,
+    range-units = single,
+    range-phrase = --,
+    per-mode = symbol-or-fraction,
+    list-final-separator = {, and }
+}
+\DeclareSIUnit\atm{atm}
+\DeclareSIUnit\bar{bar}
+
+% --- Graphics, Plots & TikZ ---
+\usepackage{graphicx}
+\usepackage{float, caption, subcaption, wrapfig}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usetikzlibrary{arrows.meta, angles, quotes, calc, tikzmark}
+
+% --- Typography ---
+\usepackage{textcomp}
+\usepackage{csquotes}
+\usepackage{xspace}
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\microtypecontext{spacing=nonfrench}
+
+% --- Headers ---
+\usepackage{fancyhdr}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\lhead{Re Entry Surfaces}
+\rhead{Jose Montalvo}
+% \chead{} is intentionally left blank here!
+
+% --- Custom Commands ---
+\newcommand{\BOX}{\[\begin{split}\hspace{16.2cm} \Box\end{split}\]}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\C}{\mathbb{C}}
